@@ -14,6 +14,11 @@ class FiguresController < ApplicationController
     erb :"figures/show"
   end
 
+  get '/figures/:id/edit' do
+
+    erb :"figures/edit"
+  end
+
   post '/figures' do
     # binding.pry
     figure = Figure.create params[:figure] #new_figure with or without titles and landmarks
