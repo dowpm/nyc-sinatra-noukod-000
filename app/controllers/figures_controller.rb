@@ -19,6 +19,11 @@ class FiguresController < ApplicationController
     erb :"figures/edit"
   end
 
+  patch '/figures' do
+
+    redirect "/figures/#{figure.id}"
+  end
+
   post '/figures' do
     # binding.pry
     figure = Figure.create params[:figure] #new_figure with or without titles and landmarks
