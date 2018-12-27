@@ -19,7 +19,7 @@ class FiguresController < ApplicationController
     erb :"figures/edit"
   end
 
-  patch '/figures' do
+  patch '/figures/:id' do
 
     redirect "/figures/#{figure.id}"
   end
